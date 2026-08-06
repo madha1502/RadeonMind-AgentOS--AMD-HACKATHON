@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-primary: #090B10;
+  --bg-card: rgba(18, 22, 33, 0.75);
+  --bg-card-hover: rgba(28, 34, 50, 0.85);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(237, 28, 36, 0.4);
+  
+  --amd-red: #ED1C24;
+  --amd-red-glow: rgba(237, 28, 36, 0.35);
+  --radeon-rose: #FF3B5C;
+  --cyan-accent: #00F2FE;
+  --purple-accent: #8E2DE2;
+  --green-accent: #00E676;
+  --yellow-accent: #FFD600;
+
+  --text-main: #F0F4F8;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(237, 28, 36, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.06) 0%, transparent 45%);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.glass-panel-highlight {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-highlight);
+  box-shadow: 0 0 25px var(--amd-red-glow);
+  border-radius: 16px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amd-red);
+}
+
+/* Glow Badges */
+.badge-amd {
+  background: linear-gradient(135deg, var(--amd-red), #B30006);
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 12px var(--amd-red-glow);
+}
+
+.badge-cyan {
+  background: rgba(0, 242, 254, 0.15);
+  color: var(--cyan-accent);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-green {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--green-accent);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Code Blocks */
+pre, code {
+  font-family: var(--font-mono);
+}
+
+.code-box {
+  background: #05070A;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 14px;
+  color: #38BDF8;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--amd-red) 0%, #C00A11 100%);
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px var(--amd-red-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(237, 28, 36, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+  border: 1px solid var(--border-card);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Input elements */
+input, textarea, select {
+  background: rgba(10, 13, 20, 0.8);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  color: var(--text-main);
+  padding: 12px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--amd-red);
+  box-shadow: 0 0 10px var(--amd-red-glow);
+}

@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node / Vite dependencies and build outputs
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Logs and scratch tasks
+*.log
+.system_generated/
+
+# Environment variables
+.env
+.venv/
+env/
+venv/
