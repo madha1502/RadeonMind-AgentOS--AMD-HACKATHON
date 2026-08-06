@@ -10,6 +10,12 @@
 
 ---
 
+## 🎬 Live Platform Demo
+
+![RadeonMind-AgentOS Interactive Demo](radeonmind_demo_video.gif)
+
+---
+
 ## 🏆 Competition Judging Criteria Alignment (100 Points)
 
 | Criteria Category | Weight | How RadeonMind-AgentOS Fulfills It |
